@@ -1,0 +1,3 @@
+font-assets: https://www.1001fonts.com/technology-font.html
+sound-assets: https://mechvibes.com/sound-packs/
+favicon: https://www.flaticon.com/free-icon/math_2861731
