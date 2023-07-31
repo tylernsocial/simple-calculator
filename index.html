@@ -1,15 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>calculator</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="./assets/favicon.png">
-</head>
-<body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mechcalc</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="./assets/favicon.png" />
+  </head>
+  <body>
+    <div id="calc-container">
+      <div id="LED-container">
+        <!--represents in and output screen-->
+        <div id="screen">
+          <div id="post-op"></div>
+          <!--represents the old operation-->
+          <div id="pre-op"></div>
+          <!--represents the current operation-->
+        </div>
+        <div id="shadow"></div>
+      </div>
+      <div class="button-container">
+        <button class="button clear left-most-buttons">AC</button>
+        <button class="button percent">%</button>
+        <button class="button operator">/</button>
+        <button class="button operator right-most-buttons">x</button>
+        <button class="button number left-most-buttons">7</button>
+        <button class="button number">8</button>
+        <button class="button number">9</button>
+        <button class="button operator right-most-buttons">-</button>
+        <button class="button number left-most-buttons">4</button>
+        <button class="button number">5</button>
+        <button class="button number">6</button>
+        <button class="button operator">+</button>
+        <button class="button number left-most-buttons">1</button>
+        <button class="button number right-most-buttons">2</button>
+        <button class="button number left-most-buttons">3</button>
+        <button id="zero" class="button number left-most-buttons">0</button>
+        <button class="button left-most-buttons">.</button>
+        <button id="equals-sign" class="button equals">=</button>
+      </div>
+    </div>
     <!-- script tag -->
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
