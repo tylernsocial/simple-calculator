@@ -1,0 +1,130 @@
+/*@font-face allows a custom fon,
+the font can be loaded locally installed 
+from the users own computer */
+@font-face {
+  font-family: OpenGorton;
+  src: url(assets/font-assets/key-font/OpenGorton-Regular.otf);
+}
+@font-face {
+  font-family: Technology;
+  src: url(assets/font-assets/screen-font/Technology.ttf);
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #c0cfb2;
+}
+
+.calc-container {
+  width: 360px;
+  height: 580px;
+  background-color: #59635b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 50px;
+  padding: 5px 7px;
+  filter: drop-shadow(2px 15px 12px #93af90);
+  border: 40px solid #f1ebe1;
+  margin-top: 220px;
+}
+.LED-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 352px;
+  height: 110px;
+  border-width: 3px 7px 10px;
+  border-style: solid;
+  background: #f1ebe1;
+  border-color: #fff9ee #cfc9be #afaa9f;
+  border-radius: 18px;
+}
+.screen {
+  font-family: Technology;
+  background-color: rgb(201, 215, 205);
+  width: 338px;
+  height: 90px;
+  border-radius: 4px;
+}
+
+.shadow {
+  width: 330px;
+  height: 82px;
+  border-radius: 4px;
+  position: absolute;
+  border: 4px inset rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+.post-op {
+  width: 335px;
+  height: 40px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 27px;
+  opacity: 0.7;
+  padding: 0px;
+  margin: 0px;
+}
+.pre-op {
+  width: 335px;
+  height: 60px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 60px;
+  opacity: 0.7;
+}
+.button-container {
+  width: 366px;
+  height: 460px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+  margin-top: 5px;
+}
+.button {
+  font-family: OpenGorton;
+  font-size: 21px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  width: 87px;
+  height: 87px;
+  padding-bottom: 3px;
+  padding-left: 7px;
+  background: #8ba888;
+  border-color: #a0c29c #788a76 #697767;
+  border-width: 3px 7px 10px;
+  border-style: solid;
+  border-radius: 4px;
+  color: #f1ebe1;
+}
+.button:active {
+  -webkit-transform: scale(0.94, 0.94);
+  -moz-transform: scale(0.94, 0.94);
+  -ms-transform: scale(0.94, 0.94);
+  -o-transform: scale(0.94, 0.94);
+  transform: scale(0.94, 0.94);
+}
+.button:hover {
+  filter: drop-shadow(2px 15px 12px #cfffcb);
+}
+.equals:hover {
+  filter: drop-shadow(2px 15px 12px #fcf8f2);
+}
+.equals {
+  width: 180px;
+  grid-column: span 2;
+  color: #8ba888;
+  background: #f1ebe1;
+  border-color: #fff9ee #cfc9be #afaa9f;
+}
+
+.disabled {
+  pointer-events: none;
+}

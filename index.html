@@ -8,35 +8,36 @@
     <link rel="icon" href="./assets/favicon.png" />
   </head>
   <body>
-    <div id="calc-container">
-      <div id="LED-container">
+    <div id="calc-container" class="calc-container">
+      <div id="LED-container" class="LED-container">
         <!--represents in and output screen-->
-        <div id="screen">
-          <div id="post-op"></div>
+        <div id="screen" class="screen">
+          <div id="post-op" class="post-op"></div>
           <!--represents the old operation-->
-          <div id="pre-op"></div>
+          <div id="pre-op" class="pre-op"></div>
           <!--represents the current operation-->
         </div>
-        <div id="shadow"></div>
+        <div id="shadow" class="shadow"></div>
       </div>
       <div class="button-container">
-        <button class="button clear left-most-buttons">AC</button>
+        <button class="button clear">AC</button>
         <button class="button percent">%</button>
+        <button class="button operator">^</button>
         <button class="button operator">/</button>
-        <button class="button operator right-most-buttons">x</button>
-        <button class="button number left-most-buttons">7</button>
+        <button class="button number">7</button>
         <button class="button number">8</button>
         <button class="button number">9</button>
-        <button class="button operator right-most-buttons">-</button>
-        <button class="button number left-most-buttons">4</button>
+        <button class="button operator">x</button>
+        <button class="button number">4</button>
         <button class="button number">5</button>
         <button class="button number">6</button>
+        <button class="button operator">-</button>
+        <button class="button number">1</button>
+        <button class="button number">2</button>
+        <button class="button number">3</button>
         <button class="button operator">+</button>
-        <button class="button number left-most-buttons">1</button>
-        <button class="button number right-most-buttons">2</button>
-        <button class="button number left-most-buttons">3</button>
-        <button id="zero" class="button number left-most-buttons">0</button>
-        <button class="button left-most-buttons">.</button>
+        <button class="button number">0</button>
+        <button class="button">.</button>
         <button id="equals-sign" class="button equals">=</button>
       </div>
     </div>
