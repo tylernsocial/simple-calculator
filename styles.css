@@ -47,13 +47,14 @@ body {
   font-family: Technology;
   background-color: rgb(201, 215, 205);
   width: 338px;
-  height: 90px;
+  height: 100px;
   border-radius: 4px;
+  font-size: 20px;
 }
 
 .shadow {
   width: 330px;
-  height: 82px;
+  height: 90px;
   border-radius: 4px;
   position: absolute;
   border: 4px inset rgba(0, 0, 0, 0.05);
