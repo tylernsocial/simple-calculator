@@ -37,49 +37,33 @@ function playRowSound(row) {
 // Initialize a variable to keep track of the last button pressed
 let lastButton = null;
 
+function roundToFiveDecimals(number) {
+  return Math.round(number * 1e7) / 1e7;
+}
+
 function handleInput(value) {
-    if (value === "=") {
-      try {
-        const result = eval(preOpText);
-        const maxDigits = 6;
-  
-        // Convert the result to a string
-        let formattedResult = result.toString();
-  
-        // Check if the result contains a decimal point
-        const decimalIndex = formattedResult.indexOf(".");
-        if (decimalIndex !== -1) {
-          // Calculate the number of digits before and after the decimal point
-          const integerDigits = decimalIndex;
-          const decimalDigits = formattedResult.length - decimalIndex - 1;
-  
-          // Check if the number of digits exceeds the maximum allowed
-          if (integerDigits + decimalDigits > maxDigits) {
-            // If the result is a very large number, round it to the maximum number of digits allowed
-            if (result > 1e11 || result < -1e11) {
-              formattedResult = Number(result.toPrecision(maxDigits));
-            } else {
-              // Otherwise, truncate the number to fit the maximum number of digits allowed
-              const integerPart = formattedResult.substring(0, maxDigits - decimalDigits - 1);
-              const decimalPart = formattedResult.substring(maxDigits - decimalDigits - 1, formattedResult.length - integerDigits);
-              formattedResult = integerPart + decimalPart;
-            }
-          }
-        } else {
-          // If the result is a very large number, round it to the maximum number of digits allowed
-          if (result > 1e11 || result < -1e11) {
-            formattedResult = Number(result.toPrecision(maxDigits));
-          }
-        }
-  
-        postOpText = `${preOpText}=${formattedResult}`;
-        preOpText = formattedResult;
-      } catch (error) {
-        postOpText = "Error";
+  if (value === "=") {
+    try {
+      const result = eval(preOpText);
+      const maxDigits = 6;
+
+      // Convert the result to a string
+      let formattedResult = result.toString();
+      if (Math.abs(result) >= 1e14) {
+        formattedResult = Number(result.toPrecision(maxDigits));
+      } else if (formattedResult.includes('.')) {
+        // Round decimal numbers to the 5th position
+        formattedResult = roundToFiveDecimals(result);
       }
-      // Reset the lastButton variable after pressing equals
-      lastButton = null;
-    } else {
+
+      postOpText = `${preOpText}=${formattedResult}`;
+      preOpText = formattedResult;
+    } catch (error) {
+      postOpText = "Error";
+    }
+    // Reset the lastButton variable after pressing equals
+    lastButton = null;
+  } else {
       if (value === "x") {
         value = "*";
       }
