@@ -16,6 +16,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #c0cfb2;
+  flex-direction: column;
 }
 
 .calc-container {
@@ -29,6 +30,7 @@ body {
   padding: 5px 7px;
   filter: drop-shadow(2px 15px 12px #93af90);
   border: 40px solid #f1ebe1;
+ 
   
 }
 .LED-container {
@@ -126,8 +128,18 @@ body {
   border-color: #fff9ee #cfc9be #afaa9f;
 }
 
-.disabled {
-  pointer-events: none;
+.foot {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 2px;
+  font-family: 'Courier New', Courier, monospace;
+  color: #667e63;
+  font-weight: bolder;
 }
-
-
+.foot img {
+  width: 18px;
+  height: 18px;
+}
